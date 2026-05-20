@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { propostas } from '../data.js'
 import SectionTitle from './SectionTitle.jsx'
 import IconeProposta from './IconeProposta.jsx'
@@ -72,8 +71,10 @@ export default function Propostas() {
 
         {temMais && (
           <div className="text-center mt-12">
-            <Link
-              to="/propostas"
+            <a
+              href="/propostas"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 bg-amarelo hover:bg-amarelo-claro text-noite font-bold px-7 py-4 rounded-full transition-all hover:shadow-2xl hover:shadow-amarelo/40 hover:-translate-y-1"
             >
               Ver todas as {propostas.length} propostas
@@ -86,7 +87,7 @@ export default function Propostas() {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
-            </Link>
+            </a>
           </div>
         )}
 

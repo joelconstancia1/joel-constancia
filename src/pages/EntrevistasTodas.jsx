@@ -1,7 +1,5 @@
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { entrevistas } from '../data.js'
-import Header from '../components/Header.jsx'
 import Footer from '../components/Footer.jsx'
 
 export default function EntrevistasTodas() {
@@ -15,26 +13,8 @@ export default function EntrevistasTodas() {
 
   return (
     <div className="min-h-screen bg-noite text-white flex flex-col">
-      <Header />
-
-      <main className="flex-1 pt-32 sm:pt-36 pb-24">
+      <main className="flex-1 pt-16 pb-24">
         <div className="max-w-7xl mx-auto px-6">
-          {/* Breadcrumb / voltar */}
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-white/60 hover:text-amarelo transition-colors mb-8 group text-sm"
-          >
-            <svg
-              className="w-4 h-4 group-hover:-translate-x-1 transition-transform"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-            </svg>
-            Voltar para a página inicial
-          </Link>
 
           {/* Cabeçalho */}
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -91,24 +71,6 @@ export default function EntrevistasTodas() {
             </div>
           )}
 
-          {/* Voltar pro topo */}
-          <div className="text-center mt-16">
-            <Link
-              to="/"
-              className="inline-flex items-center gap-2 bg-amarelo hover:bg-amarelo-claro text-noite font-bold px-7 py-3.5 rounded-full transition-all hover:shadow-xl hover:shadow-amarelo/30 hover:-translate-y-1"
-            >
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-              </svg>
-              Voltar para a página inicial
-            </Link>
-          </div>
         </div>
       </main>
 

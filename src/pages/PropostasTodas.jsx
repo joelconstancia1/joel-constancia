@@ -1,7 +1,5 @@
 import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { propostas, linkVaquinha } from '../data.js'
-import Header from '../components/Header.jsx'
 import Footer from '../components/Footer.jsx'
 import IconeProposta from '../components/IconeProposta.jsx'
 
@@ -16,25 +14,8 @@ export default function PropostasTodas() {
 
   return (
     <div className="min-h-screen bg-noite text-white flex flex-col">
-      <Header />
-
-      <main className="flex-1 pt-32 sm:pt-36 pb-24">
+      <main className="flex-1 pt-16 pb-24">
         <div className="max-w-7xl mx-auto px-6">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-white/60 hover:text-amarelo transition-colors mb-8 group text-sm"
-          >
-            <svg
-              className="w-4 h-4 group-hover:-translate-x-1 transition-transform"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-            </svg>
-            Voltar para a página inicial
-          </Link>
 
           {/* Cabeçalho */}
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -138,21 +119,6 @@ export default function PropostasTodas() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </a>
-                <Link
-                  to="/"
-                  className="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white/30 hover:border-amarelo hover:bg-amarelo/5 text-white font-bold px-7 py-3.5 rounded-full transition-all"
-                >
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-                  </svg>
-                  Voltar para a home
-                </Link>
               </div>
             </div>
           </div>

@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { entrevistas } from '../data.js'
 import SectionTitle from './SectionTitle.jsx'
 
@@ -105,8 +104,10 @@ export default function Entrevistas() {
             ))}
 
             {temMais && (
-              <Link
-                to="/entrevistas"
+              <a
+                href="/entrevistas"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex items-center justify-center gap-2 w-full p-4 rounded-xl bg-amarelo hover:bg-amarelo-claro text-noite font-bold transition-all hover:shadow-xl hover:shadow-amarelo/30 mt-4"
               >
                 Ver todas as {entrevistas.length} entrevistas
@@ -119,7 +120,7 @@ export default function Entrevistas() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-              </Link>
+              </a>
             )}
           </div>
         </div>
