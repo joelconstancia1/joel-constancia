@@ -25,9 +25,9 @@ export default function Entrevistas() {
         <div className="grid lg:grid-cols-[2fr_1fr] gap-8 mt-16">
           {/* Player principal */}
           <div>
-            <div className="relative group">
+            <div className={`relative group ${principal.videoVertical ? 'max-w-xs mx-auto' : ''}`}>
               <div className="absolute -inset-2 bg-amarelo/20 rounded-2xl blur-xl group-hover:bg-amarelo/30 transition-all" />
-              <div className="relative aspect-video bg-noite rounded-2xl overflow-hidden border border-amarelo/30 shadow-2xl">
+              <div className={`relative bg-noite rounded-2xl overflow-hidden border border-amarelo/30 shadow-2xl ${principal.videoVertical ? 'aspect-[9/16]' : 'aspect-video'}`}>
                 <iframe
                   key={principal.videoId}
                   src={`https://www.youtube.com/embed/${principal.videoId}`}

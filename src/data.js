@@ -130,7 +130,8 @@ export const agenda = [
 
 // Os 3 primeiros aparecem na home. Se houver mais de 3, surge o botão
 // "Ver todas" que leva para /entrevistas (página com todos os vídeos).
-// videoId: apenas o ID do YouTube (parte final da URL: youtube.com/watch?v=ESSE_TRECHO)
+// videoId:       apenas o ID do YouTube (parte final da URL: youtube.com/watch?v=ESSE_TRECHO)
+// videoVertical: true para vídeos verticais (9:16, ex: Reels/Shorts)
 export const entrevistas = [
   {
     titulo: 'Entrevista — Programa Bom Dia Pernambuco',
