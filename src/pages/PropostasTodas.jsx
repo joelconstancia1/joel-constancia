@@ -75,7 +75,7 @@ export default function PropostasTodas() {
                       )}
 
                       {proposta.videoId && (
-                        <div className="mt-6 rounded-2xl overflow-hidden aspect-video max-w-2xl">
+                        <div className={`mt-6 rounded-2xl overflow-hidden ${proposta.videoVertical ? 'aspect-[9/16] max-w-xs' : 'aspect-video max-w-2xl'}`}>
                           <iframe
                             src={`https://www.youtube.com/embed/${proposta.videoId}`}
                             title={proposta.titulo}

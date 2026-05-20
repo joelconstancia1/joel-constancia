@@ -177,8 +177,9 @@ export const entrevistas = [
 // "Ver todas as propostas" que leva para /propostas (página completa).
 //
 // Campos obrigatórios: categoria, rotulo, titulo, resumo, texto
-// Campo opcional:      videoId  → adiciona vídeo do YouTube no card
-//                      (aparece tanto na home quanto na página /propostas)
+// Campos opcionais:    videoId       → adiciona vídeo do YouTube no card
+//                      videoVertical → true para vídeos verticais (9:16, ex: Reels/Shorts)
+//                      (aparecem tanto na home quanto na página /propostas)
 //
 // Categorias disponíveis:
 //   educacao | saude | seguranca | economia | infraestrutura | cultura | meioambiente | social
