@@ -1,39 +1,63 @@
+import { useState } from 'react'
 import { candidato, linkVaquinha, linkWhatsapp, redesSociais } from '../data.js'
 
+// =============================================================================
+//  COMO ADICIONAR FOTO EM CADA BOTÃO:
+//  1) Salve a imagem em /public/ com o nome exato indicado no campo `img`
+//     Ex: /public/btn-propostas.jpg
+//  2) Pronto. A foto aparece automaticamente no lugar do placeholder.
+//  3) Formato ideal: quadrado (1:1), por exemplo 200x200px ou 400x400px
+//  4) Para trocar de lado, mude `lado: 'right'` para `lado: 'left'`
+// =============================================================================
 const links = [
   {
     label: 'Nossas propostas',
-    sub: 'Conheça os eixos do plano de governo',
+    sub: 'Plano de governo completo',
     href: '/propostas',
+    img: '/btn-propostas.jpg', // ← salve a foto em public/btn-propostas.jpg
     emoji: '📋',
+    cor: 'from-blue-500 to-blue-700',
+    lado: 'right',
     amarelo: false,
   },
   {
     label: 'Agenda de eventos',
     sub: 'Próximos compromissos públicos',
     href: '/agenda',
+    img: '/btn-agenda.jpg', // ← salve a foto em public/btn-agenda.jpg
     emoji: '📅',
+    cor: 'from-amber-500 to-orange-600',
+    lado: 'right',
     amarelo: false,
   },
   {
-    label: 'Entrevistas & aparições',
-    sub: 'Joel na imprensa e canais independentes',
+    label: 'Entrevistas',
+    sub: 'Joel na imprensa e mídias independentes',
     href: '/entrevistas',
+    img: '/btn-entrevistas.jpg', // ← salve a foto em public/btn-entrevistas.jpg
     emoji: '🎙️',
+    cor: 'from-purple-500 to-pink-600',
+    lado: 'left',
     amarelo: false,
   },
   {
-    label: 'Entre no nosso WhatsApp',
+    label: 'Entre no WhatsApp',
     sub: 'Fique por dentro de tudo',
     href: linkWhatsapp,
+    img: '/btn-whatsapp.jpg', // ← salve a foto em public/btn-whatsapp.jpg
     emoji: '💬',
+    cor: 'from-green-500 to-emerald-600',
+    lado: 'left',
     amarelo: false,
   },
   {
     label: 'Apoie a campanha',
-    sub: 'Contribua com a vaquinha eleitoral',
+    sub: 'Doe agora para a vaquinha eleitoral',
     href: linkVaquinha,
+    img: '/btn-vaquinha.jpg', // ← salve a foto em public/btn-vaquinha.jpg
     emoji: '🤝',
+    cor: 'from-amarelo to-amarelo-escuro',
+    lado: 'right',
     amarelo: true,
   },
 ]
@@ -68,6 +92,27 @@ const iconeRede = {
   ),
 }
 
+function Thumbnail({ link }) {
+  const [erroImg, setErroImg] = useState(false)
+
+  if (link.img && !erroImg) {
+    return (
+      <img
+        src={link.img}
+        alt={link.label}
+        onError={() => setErroImg(true)}
+        className="w-24 h-24 object-contain flex-shrink-0"
+      />
+    )
+  }
+  // Placeholder — sem fundo, apenas o emoji em cima do card
+  return (
+    <div className="w-24 h-24 flex-shrink-0 flex items-center justify-center">
+      <span className="text-5xl select-none leading-none">{link.emoji}</span>
+    </div>
+  )
+}
+
 export default function LinkTree() {
   return (
     <div className="min-h-screen bg-noite flex items-start justify-center py-16 px-4">
@@ -75,7 +120,6 @@ export default function LinkTree() {
 
         {/* Perfil */}
         <div className="text-center mb-10">
-          {/* Foto — substitua por <img src="/joel.jpg" .../> quando tiver a foto */}
           <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-amarelo/10 border-2 border-amarelo/50 text-amarelo font-display text-3xl mb-5">
             JC
           </div>
@@ -97,27 +141,26 @@ export default function LinkTree() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group flex items-center gap-4 w-full px-5 py-4 rounded-2xl border transition-all hover:-translate-y-0.5 hover:shadow-xl ${
+              className={`group relative flex items-center overflow-hidden w-full h-24 rounded-2xl border transition-all hover:-translate-y-0.5 hover:shadow-xl ${
                 link.amarelo
-                  ? 'bg-amarelo hover:bg-amarelo-claro border-amarelo text-noite hover:shadow-amarelo/40'
-                  : 'bg-grafite hover:bg-carvao border-white/8 hover:border-amarelo/30 text-white hover:shadow-amarelo/10'
+                  ? 'bg-amarelo hover:bg-amarelo-claro border-amarelo hover:shadow-amarelo/40'
+                  : 'bg-grafite hover:bg-carvao border-white/8 hover:border-amarelo/30 hover:shadow-amarelo/10'
               }`}
             >
-              <span className="text-2xl w-8 text-center leading-none">{link.emoji}</span>
-              <span className="flex-1 text-left">
-                <span className={`block font-bold text-sm ${link.amarelo ? 'text-noite' : 'text-amarelo'}`}>
+              {link.lado === 'left' && <Thumbnail link={link} />}
+
+              <div className="flex-1 flex flex-col justify-center items-center text-center px-3">
+                <span className={`block font-bold text-sm uppercase tracking-wide leading-tight ${link.amarelo ? 'text-noite' : 'text-amarelo'}`}>
                   {link.label}
                 </span>
-                <span className={`block text-xs mt-0.5 ${link.amarelo ? 'text-noite/60' : 'text-white/40'}`}>
-                  {link.sub}
-                </span>
-              </span>
-              <svg
-                className={`w-4 h-4 opacity-40 group-hover:opacity-100 group-hover:translate-x-1 transition-all ${link.amarelo ? 'text-noite' : 'text-white'}`}
-                fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
+                {link.sub && (
+                  <span className={`block text-xs mt-1 leading-snug ${link.amarelo ? 'text-noite/70' : 'text-white/60'}`}>
+                    {link.sub}
+                  </span>
+                )}
+              </div>
+
+              {link.lado === 'right' && <Thumbnail link={link} />}
             </a>
           ))}
         </div>
