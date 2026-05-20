@@ -14,7 +14,7 @@ const links = [
     label: 'Nossas propostas',
     sub: 'Plano de governo completo',
     href: '/propostas',
-    img: '/btn-propostas.jpg', // ← salve a foto em public/btn-propostas.jpg
+    img: '/btn-propostas.png', // ← salve a foto em public/btn-propostas.png
     emoji: '📋',
     cor: 'from-blue-500 to-blue-700',
     lado: 'right',
@@ -24,27 +24,27 @@ const links = [
     label: 'Agenda de eventos',
     sub: 'Próximos compromissos públicos',
     href: '/agenda',
-    img: '/btn-agenda.jpg', // ← salve a foto em public/btn-agenda.jpg
+    img: '/btn-agenda.png',
     emoji: '📅',
     cor: 'from-amber-500 to-orange-600',
-    lado: 'right',
+    lado: 'left',
     amarelo: false,
   },
   {
     label: 'Entrevistas',
     sub: 'Joel na imprensa e mídias independentes',
     href: '/entrevistas',
-    img: '/btn-entrevistas.jpg', // ← salve a foto em public/btn-entrevistas.jpg
+    img: '/btn-entrevistas.png',
     emoji: '🎙️',
     cor: 'from-purple-500 to-pink-600',
-    lado: 'left',
+    lado: 'right',
     amarelo: false,
   },
   {
     label: 'Entre no WhatsApp',
     sub: 'Fique por dentro de tudo',
     href: linkWhatsapp,
-    img: '/btn-whatsapp.jpg', // ← salve a foto em public/btn-whatsapp.jpg
+    img: '/btn-whatsapp.png',
     emoji: '💬',
     cor: 'from-green-500 to-emerald-600',
     lado: 'left',
@@ -54,7 +54,7 @@ const links = [
     label: 'Apoie a campanha',
     sub: 'Doe agora para a vaquinha eleitoral',
     href: linkVaquinha,
-    img: '/btn-vaquinha.jpg', // ← salve a foto em public/btn-vaquinha.jpg
+    img: '/btn-vaquinha.png',
     emoji: '🤝',
     cor: 'from-amarelo to-amarelo-escuro',
     lado: 'right',
@@ -97,18 +97,20 @@ function Thumbnail({ link }) {
 
   if (link.img && !erroImg) {
     return (
-      <img
-        src={link.img}
-        alt={link.label}
-        onError={() => setErroImg(true)}
-        className="w-24 h-24 object-contain flex-shrink-0"
-      />
+      <div className="w-28 flex-shrink-0 self-stretch flex items-end justify-center">
+        <img
+          src={link.img}
+          alt={link.label}
+          onError={() => setErroImg(true)}
+          className="max-h-32 w-auto max-w-full object-contain drop-shadow-2xl"
+        />
+      </div>
     )
   }
   // Placeholder — sem fundo, apenas o emoji em cima do card
   return (
-    <div className="w-24 h-24 flex-shrink-0 flex items-center justify-center">
-      <span className="text-5xl select-none leading-none">{link.emoji}</span>
+    <div className="w-28 h-24 flex-shrink-0 flex items-center justify-center">
+      <span className="text-7xl select-none leading-none drop-shadow-lg">{link.emoji}</span>
     </div>
   )
 }
@@ -134,14 +136,14 @@ export default function LinkTree() {
         </div>
 
         {/* Links */}
-        <div className="space-y-3">
+        <div className="space-y-10 pt-8">
           {links.map((link, i) => (
             <a
               key={i}
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group relative flex items-center overflow-hidden w-full h-24 rounded-2xl border transition-all hover:-translate-y-0.5 hover:shadow-xl ${
+              className={`group relative flex items-center w-full h-24 rounded-2xl border transition-all hover:-translate-y-0.5 hover:shadow-xl ${
                 link.amarelo
                   ? 'bg-amarelo hover:bg-amarelo-claro border-amarelo hover:shadow-amarelo/40'
                   : 'bg-grafite hover:bg-carvao border-white/8 hover:border-amarelo/30 hover:shadow-amarelo/10'
