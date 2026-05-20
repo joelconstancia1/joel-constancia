@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { agenda } from '../data.js'
 import SectionTitle from './SectionTitle.jsx'
 
@@ -14,7 +15,10 @@ function formatData(iso) {
 }
 
 export default function Agenda() {
+  const LIMITE = 3
   const eventosOrdenados = [...agenda].sort((a, b) => a.data.localeCompare(b.data))
+  const eventoDestaque = eventosOrdenados.slice(0, LIMITE)
+  const temMais = eventosOrdenados.length > LIMITE
 
   return (
     <section id="agenda" className="relative py-24 sm:py-32 bg-grafite">
@@ -32,14 +36,14 @@ export default function Agenda() {
             </div>
           )}
 
-          {eventosOrdenados.map((evento, i) => {
+          {eventoDestaque.map((evento, i) => {
             const data = formatData(evento.data)
             return (
               <article
                 key={i}
                 className="group relative bg-grafite hover:bg-carvao border border-white/5 hover:border-amarelo/50 rounded-2xl p-6 sm:p-8 transition-all hover:shadow-xl hover:shadow-amarelo/10"
               >
-                <div className="grid sm:grid-cols-[auto_1fr_auto] gap-6 items-center">
+                <div className="grid sm:grid-cols-[auto_1fr] gap-6 items-center">
                   {/* Data */}
                   <div className="flex sm:flex-col items-center sm:items-start gap-3 sm:gap-0 pb-4 sm:pb-0 border-b sm:border-b-0 sm:border-r border-white/10 sm:pr-6 min-w-[90px]">
                     <div className="font-display text-5xl sm:text-6xl text-amarelo leading-none">
@@ -86,23 +90,31 @@ export default function Agenda() {
                     )}
                   </div>
 
-                  {/* Indicador */}
-                  <div className="hidden sm:flex items-center justify-center w-10 h-10 rounded-full border border-amarelo/30 group-hover:bg-amarelo group-hover:border-amarelo transition-all">
-                    <svg
-                      className="w-4 h-4 text-amarelo group-hover:text-noite transition-colors"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
                 </div>
               </article>
             )
           })}
         </div>
+
+        {temMais && (
+          <div className="text-center mt-12">
+            <Link
+              to="/agenda"
+              className="group inline-flex items-center gap-3 bg-amarelo hover:bg-amarelo-claro text-noite font-bold px-7 py-4 rounded-full transition-all hover:shadow-2xl hover:shadow-amarelo/40 hover:-translate-y-1"
+            >
+              Ver toda a agenda ({agenda.length} eventos)
+              <svg
+                className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="3"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
+          </div>
+        )}
 
       </div>
     </section>

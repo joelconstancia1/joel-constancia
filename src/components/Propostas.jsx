@@ -53,6 +53,18 @@ export default function Propostas() {
                 <p className="text-white/60 text-sm leading-relaxed">
                   {proposta.resumo}
                 </p>
+
+                {proposta.videoId && (
+                  <div className="mt-5 rounded-xl overflow-hidden aspect-video">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${proposta.videoId}`}
+                      title={proposta.titulo}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    />
+                  </div>
+                )}
               </div>
             </article>
           ))}
