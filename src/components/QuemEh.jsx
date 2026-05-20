@@ -13,9 +13,9 @@ export default function QuemEh() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-start mt-16">
           {/* Vídeo */}
-          <div className="relative group">
+          <div className="relative group max-w-xs mx-auto w-full">
             <div className="absolute -inset-2 bg-amarelo/20 rounded-2xl blur-xl group-hover:bg-amarelo/30 transition-all" />
-            <div className="relative aspect-video bg-noite rounded-2xl overflow-hidden border border-amarelo/30 shadow-2xl">
+            <div className="relative aspect-[9/16] bg-noite rounded-2xl overflow-hidden border border-amarelo/30 shadow-2xl">
               <iframe
                 src={videoApresentacao}
                 title="Apresentação Joel Constância"

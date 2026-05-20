@@ -36,25 +36,27 @@ export default function Propostas() {
                 {String(i + 1).padStart(2, '0')}
               </div>
 
-              <div className="relative">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-amarelo/10 border border-amarelo/30 text-amarelo mb-5 group-hover:bg-amarelo group-hover:text-noite transition-all">
-                  <IconeProposta categoria={proposta.categoria} className="w-7 h-7" />
+              <div className="relative flex flex-col gap-4 items-start">
+                <div className="flex-1">
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-amarelo/10 border border-amarelo/30 text-amarelo mb-5 group-hover:bg-amarelo group-hover:text-noite transition-all">
+                    <IconeProposta categoria={proposta.categoria} className="w-7 h-7" />
+                  </div>
+
+                  <div className="text-amarelo text-[10px] font-bold tracking-widest uppercase mb-2">
+                    {proposta.rotulo}
+                  </div>
+
+                  <h3 className="font-display text-2xl text-white mb-3 leading-tight">
+                    {proposta.titulo}
+                  </h3>
+
+                  <p className="text-white/60 text-sm leading-relaxed">
+                    {proposta.resumo}
+                  </p>
                 </div>
-
-                <div className="text-amarelo text-[10px] font-bold tracking-widest uppercase mb-2">
-                  {proposta.rotulo}
-                </div>
-
-                <h3 className="font-display text-2xl text-white mb-3 leading-tight">
-                  {proposta.titulo}
-                </h3>
-
-                <p className="text-white/60 text-sm leading-relaxed">
-                  {proposta.resumo}
-                </p>
 
                 {proposta.videoId && (
-                  <div className="mt-5 rounded-xl overflow-hidden aspect-[9/16] max-w-[280px] mx-auto">
+                  <div className="flex-shrink-0 w-full rounded-xl overflow-hidden aspect-[9/16] max-w-[260px] mx-auto">
                     <iframe
                       src={`https://www.youtube.com/embed/${proposta.videoId}`}
                       title={proposta.titulo}

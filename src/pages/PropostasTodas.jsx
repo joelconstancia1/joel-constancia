@@ -58,24 +58,26 @@ export default function PropostasTodas() {
                     </div>
 
                     {/* Conteúdo */}
-                    <div className="flex-1">
-                      <div className="text-amarelo text-[10px] font-bold tracking-widest uppercase mb-2">
-                        {proposta.rotulo}
-                      </div>
-                      <h2 className="font-display text-3xl sm:text-4xl text-white mb-4 leading-tight group-hover:text-amarelo transition-colors">
-                        {proposta.titulo}
-                      </h2>
-                      <p className="text-white/80 text-base sm:text-lg leading-relaxed mb-4 font-medium">
-                        {proposta.resumo}
-                      </p>
-                      {proposta.texto && (
-                        <p className="text-white/60 text-sm sm:text-base leading-relaxed">
-                          {proposta.texto}
+                    <div className="flex-1 flex flex-col sm:flex-row gap-6 items-start">
+                      <div className="flex-1">
+                        <div className="text-amarelo text-[10px] font-bold tracking-widest uppercase mb-2">
+                          {proposta.rotulo}
+                        </div>
+                        <h2 className="font-display text-3xl sm:text-4xl text-white mb-4 leading-tight group-hover:text-amarelo transition-colors">
+                          {proposta.titulo}
+                        </h2>
+                        <p className="text-white/80 text-base sm:text-lg leading-relaxed mb-4 font-medium">
+                          {proposta.resumo}
                         </p>
-                      )}
+                        {proposta.texto && (
+                          <p className="text-white/60 text-sm sm:text-base leading-relaxed">
+                            {proposta.texto}
+                          </p>
+                        )}
+                      </div>
 
                       {proposta.videoId && (
-                        <div className="mt-6 rounded-2xl overflow-hidden aspect-[9/16] max-w-xs">
+                        <div className="flex-shrink-0 w-full sm:w-72 rounded-xl overflow-hidden aspect-[9/16]">
                           <iframe
                             src={`https://www.youtube.com/embed/${proposta.videoId}`}
                             title={proposta.titulo}
