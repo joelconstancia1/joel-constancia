@@ -44,9 +44,9 @@ export default function EntrevistasTodas() {
               {entrevistas.map((video, i) => (
                 <article
                   key={i}
-                  className={`group bg-grafite border border-white/5 hover:border-amarelo/40 rounded-2xl overflow-hidden transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-amarelo/10 ${video.videoVertical ? 'max-w-xs mx-auto w-full' : ''}`}
+                  className="group bg-grafite border border-white/5 hover:border-amarelo/40 rounded-2xl overflow-hidden transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-amarelo/10 max-w-xs mx-auto w-full"
                 >
-                  <div className={`relative bg-noite overflow-hidden ${video.videoVertical ? 'aspect-[9/16]' : 'aspect-video'}`}>
+                  <div className="relative bg-noite overflow-hidden aspect-[9/16]">
                     <iframe
                       src={`https://www.youtube.com/embed/${video.videoId}`}
                       title={video.titulo}

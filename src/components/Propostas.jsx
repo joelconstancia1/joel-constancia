@@ -54,7 +54,7 @@ export default function Propostas() {
                 </p>
 
                 {proposta.videoId && (
-                  <div className={`mt-5 rounded-xl overflow-hidden ${proposta.videoVertical ? 'aspect-[9/16] max-w-[280px] mx-auto' : 'aspect-video'}`}>
+                  <div className="mt-5 rounded-xl overflow-hidden aspect-[9/16] max-w-[280px] mx-auto">
                     <iframe
                       src={`https://www.youtube.com/embed/${proposta.videoId}`}
                       title={proposta.titulo}
