@@ -26,8 +26,8 @@ const iconeWhatsapp = (
 
 const links = [
   {
-    label: 'Nossas propostas',
-    sub: 'Plano de governo completo',
+    label: 'Propostas',
+    sub: 'Algumas propostas',
     href: '/propostas',
     img: '/btn-propostas.png', // ← salve a foto em public/btn-propostas.png
     emoji: '📋',
