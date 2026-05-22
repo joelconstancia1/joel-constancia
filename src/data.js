@@ -214,8 +214,8 @@ export const propostas = [
 // Aparece em: rodapé e barra de redes sociais
 export const redesSociais = {
   instagram: 'https://instagram.com/joelconstancia',
-  facebook: 'https://facebook.com/joelconstancia',
-  twitter: 'https://twitter.com/joelconstancia',
-  tiktok: 'https://tiktok.com/@joelconstancia',
+  facebook: '',
+  twitter: '',
+  tiktok: '',
   youtube: 'https://youtube.com/@joelconstancia',
 }
