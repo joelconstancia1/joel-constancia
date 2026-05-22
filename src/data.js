@@ -134,40 +134,16 @@ export const agenda = [
 // videoVertical: true para vídeos verticais (9:16, ex: Reels/Shorts)
 export const entrevistas = [
   {
-    titulo: 'Entrevista — Programa Bom Dia Pernambuco',
-    veiculo: 'TV Local',
-    videoId: 'dQw4w9WgXcQ',
-    data: 'Maio 2026',
+    titulo: 'Podcast com Joel Constância',
+    veiculo: 'YouTube',
+    videoId: 'hxnv8-ONEwg',
+    data: '2026',
   },
   {
-    titulo: 'Joel fala sobre educação no estado',
-    veiculo: 'Rádio Jornal',
-    videoId: 'dQw4w9WgXcQ',
-    data: 'Abril 2026',
-  },
-  {
-    titulo: 'Debate sobre segurança pública',
-    veiculo: 'Canal Independente',
-    videoId: 'dQw4w9WgXcQ',
-    data: 'Março 2026',
-  },
-  {
-    titulo: 'Sabatina — Propostas para saúde em PE',
-    veiculo: 'Portal NE10',
-    videoId: 'dQw4w9WgXcQ',
-    data: 'Março 2026',
-  },
-  {
-    titulo: 'Joel no podcast Pernambuco em Foco',
-    veiculo: 'Pernambuco em Foco',
-    videoId: 'dQw4w9WgXcQ',
-    data: 'Fevereiro 2026',
-  },
-  {
-    titulo: 'Mesa-redonda sobre desenvolvimento regional',
-    veiculo: 'TV Universitária',
-    videoId: 'dQw4w9WgXcQ',
-    data: 'Janeiro 2026',
+    titulo: 'Podcast com Joel Constância',
+    veiculo: 'YouTube',
+    videoId: 'cu7bCWjvGXs',
+    data: '2026',
   },
   // Adicione mais entrevistas copiando o formato acima
 ]

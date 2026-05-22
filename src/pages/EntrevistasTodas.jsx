@@ -40,13 +40,13 @@ export default function EntrevistasTodas() {
               <p className="text-white/50">Nenhuma entrevista cadastrada no momento.</p>
             </div>
           ) : (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
               {entrevistas.map((video, i) => (
                 <article
                   key={i}
-                  className="group bg-grafite border border-white/5 hover:border-amarelo/40 rounded-2xl overflow-hidden transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-amarelo/10 max-w-xs mx-auto w-full"
+                  className="group bg-grafite border border-white/5 hover:border-amarelo/40 rounded-2xl overflow-hidden transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-amarelo/10 w-full"
                 >
-                  <div className="relative bg-noite overflow-hidden aspect-[9/16]">
+                  <div className="relative bg-noite overflow-hidden aspect-video">
                     <iframe
                       src={`https://www.youtube.com/embed/${video.videoId}`}
                       title={video.titulo}
