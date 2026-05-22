@@ -122,8 +122,13 @@ export default function LinkTree() {
 
         {/* Perfil */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-amarelo/10 border-2 border-amarelo/50 text-amarelo font-display text-3xl mb-5">
-            JC
+          <div className="inline-flex items-center justify-center w-44 h-44 sm:w-52 sm:h-52 rounded-full bg-amarelo/10 border-2 border-amarelo/50 text-amarelo font-display text-5xl mb-5 overflow-hidden">
+            <img
+              src="/sentado.png"
+              alt={candidato.nome}
+              className="w-full h-full object-cover object-[50%_25%]"
+              onError={(e) => { e.currentTarget.style.display = 'none' }}
+            />
           </div>
           <h1 className="font-display text-4xl text-white tracking-wide leading-tight">
             {candidato.nome.split(' ')[0]}

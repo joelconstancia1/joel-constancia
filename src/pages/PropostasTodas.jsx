@@ -22,15 +22,15 @@ export default function PropostasTodas() {
             <div className="inline-flex items-center gap-2 mb-4">
               <span className="h-px w-8 bg-amarelo" />
               <span className="text-amarelo text-xs font-bold tracking-[0.25em] uppercase">
-                Plano de governo
+                Joel Constância
               </span>
               <span className="h-px w-8 bg-amarelo" />
             </div>
             <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl text-white leading-[0.95] tracking-wide mb-4">
-              Todas as <span className="text-amarelo">propostas</span>
+              Algumas <span className="text-amarelo">propostas</span>
             </h1>
             <p className="text-white/60 text-lg leading-relaxed">
-              {propostas.length} eixos de atuação pensados pelo Joel para fortalecer Pernambuco.
+              Você pode acompanhar todas as propostas no Livro Amarelo da missão.
             </p>
           </div>
 

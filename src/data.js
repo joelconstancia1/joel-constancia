@@ -57,11 +57,11 @@ export const candidato = {
 
 // Vakinha / Apoia.se / qualquer plataforma de financiamento coletivo
 // Aparece em: hero (botão "Apoie a campanha") e página /propostas
-export const linkVaquinha = 'https://www.vakinha.com.br/SUBSTITUIR_LINK_AQUI'
+export const linkVaquinha = 'https://apoiar.me/joel'
 
 // Link de convite do grupo de WhatsApp
 // Aparece em: hero (botão "Entre no nosso WhatsApp") e botão flutuante
-export const linkWhatsapp = 'https://chat.whatsapp.com/SUBSTITUIR_CODIGO_AQUI'
+export const linkWhatsapp = 'https://chat.whatsapp.com/DyXSAkqktf57wrJkKJhPsJ?mode=wwt'
 
 // ---------------- Biografia --------------------------------------------------
 
@@ -186,64 +186,48 @@ export const entrevistas = [
 //   educacao | saude | seguranca | economia | infraestrutura | cultura | meioambiente | social
 export const propostas = [
   {
-    categoria: 'educacao',
-    rotulo: 'Educação',
-    titulo: 'Escola pública de qualidade',
+    categoria: 'social',
+    rotulo: 'Gestão Pública',
+    titulo: 'Pressionar prefeitos por concursos públicos',
     resumo:
-      'Investir em formação de professores, infraestrutura escolar e tecnologia em sala de aula em todas as regiões do estado.',
+      'A maioria dos prefeitos do estado de PE usam a prefeitura como cabide de emprego e isso precisa acabar.',
     texto:
-      'Defendo um plano estadual de educação que valorize quem está na linha de frente: o professor. Vamos lutar por reajuste salarial digno, plano de carreira justo e formação continuada. Além disso, vamos modernizar as escolas estaduais com laboratórios, bibliotecas e acesso à internet de qualidade. EDITE este texto em src/data.js com a proposta completa do Joel.',
-    videoId: 'dQw4w9WgXcQ', // ← remova esta linha para tirar o vídeo do card
-  },
-  {
-    categoria: 'saude',
-    rotulo: 'Saúde',
-    titulo: 'SUS forte em todo o estado',
-    resumo:
-      'Ampliar unidades de saúde, reduzir filas de cirurgia e levar atendimento especializado para o interior.',
-    texto:
-      'Saúde pública é direito, não favor. Defendo a ampliação da rede estadual de UPAs e hospitais regionais, mutirões para zerar filas de cirurgias eletivas e fortalecimento da atenção básica. EDITE este texto em src/data.js.',
-    // videoId: 'ID_DO_YOUTUBE', // ← descomente e coloque o ID para adicionar vídeo
-  },
-  {
-    categoria: 'seguranca',
-    rotulo: 'Segurança',
-    titulo: 'Segurança pública integrada',
-    resumo:
-      'Integração entre polícias, valorização do efetivo e programas de prevenção à violência nas comunidades.',
-    texto:
-      'Combater o crime exige inteligência, integração e respeito a quem está na rua todo dia. Vamos lutar por investimento em equipamento, formação e saúde mental dos agentes, junto com programas sociais que tirem jovens da criminalidade. EDITE este texto em src/data.js.',
-    // videoId: 'ID_DO_YOUTUBE',
+      'A maioria dos prefeitos do estado de PE usam a prefeitura como cabide de emprego e isso precisa acabar.',
+    videoId: 'XdPuyfTeHKw',
+    videoVertical: true,
   },
   {
     categoria: 'economia',
     rotulo: 'Economia',
-    titulo: 'Emprego e renda pra Pernambuco',
+    titulo: 'Fim do IPVA',
     resumo:
-      'Incentivo a pequenos empreendedores, simplificação tributária e atração de investimentos para o interior.',
+      'O IPVA é roubo, não devemos pagar imposto sobre a existência de um bem.',
     texto:
-      'Pernambuco precisa gerar emprego de verdade. Vamos defender linhas de crédito acessíveis para pequenos negócios, capacitação profissional gratuita e incentivos para empresas que se instalarem no agreste e no sertão. EDITE este texto em src/data.js.',
-    // videoId: 'ID_DO_YOUTUBE',
+      'O IPVA é roubo, não devemos pagar imposto sobre a existência de um bem.',
+    videoId: 'Zpj6Z7Y_ND0',
+    videoVertical: true,
   },
   {
     categoria: 'infraestrutura',
-    rotulo: 'Infraestrutura',
-    titulo: 'Estradas, saneamento e moradia',
+    rotulo: 'Municípios',
+    titulo: 'Pressionar municípios para resolver problemas estruturais',
     resumo:
-      'Recuperar estradas estaduais, universalizar saneamento básico e criar programa estadual de moradia.',
+      'A maioria dos municípios só realizam obras eleitoreiras, não pensam a longo prazo.',
     texto:
-      'Não dá pra falar em dignidade sem esgoto, água tratada e estradas seguras. Vamos cobrar pelo cumprimento das metas de saneamento, recuperação das PE que ligam o interior e um programa estadual de habitação popular. EDITE este texto em src/data.js.',
-    // videoId: 'ID_DO_YOUTUBE',
+      'A maioria dos municípios só realizam obras eleitoreiras, não pensam a longo prazo. Irei continuar pressionando os municípios do nosso estado para que pensem a longo prazo e deixem de enganar a população.',
+    videoId: 'L7j8St6ZrxA',
+    videoVertical: true,
   },
   {
-    categoria: 'cultura',
-    rotulo: 'Cultura',
-    titulo: 'Cultura pernambucana valorizada',
+    categoria: 'social',
+    rotulo: 'Transparência',
+    titulo: 'Leis gerenciais',
     resumo:
-      'Apoio a artistas locais, fortalecimento dos ciclos juninos e carnavalescos e descentralização dos recursos culturais.',
+      'Criar leis que obriguem os municípios a terem mais transparência e eficiência.',
     texto:
-      'Pernambuco é um dos maiores polos culturais do país e isso precisa virar política pública contínua. Vamos defender editais que cheguem ao interior, valorização dos mestres da cultura popular e apoio às nossas tradições. EDITE este texto em src/data.js.',
-    // videoId: 'ID_DO_YOUTUBE',
+      'Criar leis que obriguem os municípios a terem mais transparência e eficiência, como: controle de ponto dos servidores, limite de gastos com shows e propaganda, e criação de índices objetivos para medir saúde, segurança e educação. Assim, a população poderá saber de forma clara se o prefeito está fazendo uma boa gestão ou sendo incompetente.',
+    videoId: 'v8RQcHdbef8',
+    videoVertical: true,
   },
   // Adicione mais propostas copiando o formato acima
 ]
