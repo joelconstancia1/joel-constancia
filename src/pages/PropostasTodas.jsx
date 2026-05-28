@@ -94,6 +94,44 @@ export default function PropostasTodas() {
             </div>
           )}
 
+          {/* Livro Amarelo */}
+          <div className="mt-16 max-w-3xl mx-auto">
+            <a
+              href="https://loja.partidomissao.com/produtos/box-completo-livro-amarelo-ss6fb/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block bg-gradient-to-br from-amarelo/10 to-amarelo/5 hover:from-amarelo/20 hover:to-amarelo/10 border border-amarelo/30 hover:border-amarelo/60 rounded-2xl p-6 sm:p-8 transition-all hover:shadow-2xl hover:shadow-amarelo/10"
+            >
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <div className="flex-shrink-0 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-amarelo/20 border border-amarelo/40 text-amarelo">
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <div className="text-amarelo text-[10px] font-bold tracking-widest uppercase mb-1">
+                    Livro Amarelo
+                  </div>
+                  <h2 className="font-display text-2xl sm:text-3xl text-white mb-2 leading-tight group-hover:text-amarelo transition-colors">
+                    Quer saber mais propostas da missão?
+                  </h2>
+                  <p className="text-white/70 text-sm sm:text-base leading-relaxed">
+                    Aqui está nosso box com boa parte das propostas do partido missão.
+                  </p>
+                </div>
+                <svg
+                  className="hidden sm:block flex-shrink-0 w-5 h-5 text-amarelo group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
           {/* CTA final */}
           <div className="mt-16 bg-gradient-to-br from-amarelo to-amarelo-escuro rounded-3xl p-1">
             <div className="bg-noite rounded-3xl p-10 sm:p-12 text-center">
