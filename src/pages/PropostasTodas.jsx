@@ -118,6 +118,12 @@ export default function PropostasTodas() {
                   <p className="text-white/70 text-sm sm:text-base leading-relaxed">
                     Aqui está nosso box com boa parte das propostas do partido missão.
                   </p>
+                  <div className="sm:hidden mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amarelo/20 border border-amarelo/40 text-amarelo text-xs font-bold tracking-wider uppercase group-hover:bg-amarelo/30 transition-colors">
+                    Acessar
+                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </div>
                 </div>
                 <svg
                   className="hidden sm:block flex-shrink-0 w-5 h-5 text-amarelo group-hover:translate-x-1 transition-transform"
