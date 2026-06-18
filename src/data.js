@@ -210,9 +210,9 @@ export const propostas = [
     rotulo: 'Municípios',
     titulo: 'Fomentar o empreendedorismo nos municípios',
     resumo:
-      'Incentivar o empreendedorismo nos municípios para gerar emprego e renda na nossa gente.',
+      'Incentivar o empreendedorismo nos municípios para gerar emprego e acabar com a dependência do Bolsa Família e dos cargos comissionados que os prefeitos utilizam para escravizar a população.',
     texto:
-      'Incentivar o empreendedorismo nos municípios para gerar emprego e renda na nossa gente.',
+      'Incentivar o empreendedorismo nos municípios para gerar emprego e acabar com a dependência do Bolsa Família e dos cargos comissionados que os prefeitos utilizam para escravizar a população.',
     videoId: 'ib8kKZXjN78',
     videoVertical: true,
   },
