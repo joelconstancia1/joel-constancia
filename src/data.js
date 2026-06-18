@@ -205,6 +205,17 @@ export const propostas = [
     videoId: 'v8RQcHdbef8',
     videoVertical: true,
   },
+  {
+    categoria: 'economia',
+    rotulo: 'Municípios',
+    titulo: 'Fomentar o empreendedorismo nos municípios',
+    resumo:
+      'Incentivar o empreendedorismo nos municípios para gerar emprego e renda na nossa gente.',
+    texto:
+      'Incentivar o empreendedorismo nos municípios para gerar emprego e renda na nossa gente.',
+    videoId: 'ib8kKZXjN78',
+    videoVertical: true,
+  },
   // Adicione mais propostas copiando o formato acima
 ]
 
