@@ -216,6 +216,17 @@ export const propostas = [
     videoId: 'ib8kKZXjN78',
     videoVertical: true,
   },
+  {
+    categoria: 'economia',
+    rotulo: 'Turismo',
+    titulo: 'Incentivar o turismo com segurança no nosso estado',
+    resumo:
+      'Turismo com segurança para atrair visitantes e gerar renda para Pernambuco.',
+    texto:
+      'Pernambuco tem um enorme potencial turístico, mas o turismo só cresce quando o visitante se sente seguro. Minha proposta é unir turismo e segurança pública, o que aumenta a renda do estado, gera emprego e pode trazer bilhões de reais em investimentos, ajudando ainda a preservar nossos principais pontos turísticos.',
+    videoId: 'roOcFP9gTN8',
+    videoVertical: true,
+  },
   // Adicione mais propostas copiando o formato acima
 ]
 
