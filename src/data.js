@@ -61,7 +61,7 @@ export const candidato = {
 
 export const campanha = {
   cnpj: '68.455.501/0001-04',
-  nomeFantasia: 'Joel Constância 14123',
+  nomeFantasia: 'Joel Constância',
   razaoSocial: 'Eleição 2026 Joel Francisco de Melo Neto Deputado Estadual',
   endereco: 'Av. Joaquim Ribeiro, 740, Casa 23A — Caxangá, Recife/PE — CEP 50980-427',
 }
