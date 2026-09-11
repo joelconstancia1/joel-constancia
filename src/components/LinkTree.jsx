@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { candidato, campanha, linkVaquinha, linkWhatsapp, redesSociais } from '../data.js'
+import { candidato, campanha, logoPartido, linkVaquinha, linkWhatsapp, redesSociais } from '../data.js'
 
 // =============================================================================
 //  COMO ADICIONAR FOTO EM CADA BOTÃO:
@@ -150,8 +150,16 @@ export default function LinkTree() {
           <p className="text-white/50 text-sm mt-3 leading-relaxed max-w-xs mx-auto">
             {candidato.cargo} por {candidato.estado}.
           </p>
-          <div className="mt-4 inline-block bg-amarelo text-noite font-display text-2xl px-4 py-1.5 rounded-lg shadow-lg">
-            {candidato.numero}
+          <div className="mt-4 flex items-center justify-center gap-1">
+            <img
+              src={logoPartido}
+              alt={`Partido ${candidato.partido}`}
+              className="h-12 w-auto object-contain drop-shadow-lg"
+              onError={(e) => { e.currentTarget.style.display = 'none' }}
+            />
+            <div className="bg-amarelo text-noite font-display text-2xl px-4 py-1.5 rounded-lg shadow-lg">
+              {candidato.numero}
+            </div>
           </div>
           <p className="text-white/40 text-[11px] uppercase tracking-widest mt-2">
             Partido {candidato.partido} {candidato.numeroPartido}

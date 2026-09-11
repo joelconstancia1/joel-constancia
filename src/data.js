@@ -59,6 +59,11 @@ export const candidato = {
 // páginas internas e no fim da página inicial.
 // Se o `cnpj` ficar vazio, o bloco inteiro deixa de ser exibido.
 
+// Ícone da onça do Partido Missão, exibido colado à esquerda do número na home.
+// Salve o arquivo em /public/ com este nome. Se o arquivo não existir, o ícone
+// simplesmente não aparece (o número continua normal).
+export const logoPartido = '/onca-missao.png'
+
 export const campanha = {
   cnpj: '68.455.501/0001-04',
   nomeFantasia: 'Joel Constância',
