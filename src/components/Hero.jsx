@@ -32,7 +32,7 @@ export default function Hero() {
 
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-noite via-noite/80 to-transparent p-4 sm:p-6">
                 <div className="text-amarelo text-[10px] sm:text-xs uppercase tracking-widest mb-1">
-                  Pré-candidato
+                  Candidato {candidato.numero}
                 </div>
                 <div className="text-white font-display text-xl sm:text-2xl">
                   Joel Constância
@@ -53,7 +53,7 @@ export default function Hero() {
             <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-amarelo rounded-full animate-pulse-slow flex-shrink-0" />
             <span className="text-amarelo text-[10px] sm:text-xs font-bold tracking-widest uppercase">
               <span className="hidden sm:inline">{candidato.cargo} — {candidato.estado}</span>
-              <span className="sm:hidden">Pré-candidato · Dep. Estadual PE</span>
+              <span className="sm:hidden">Candidato {candidato.numero} · Dep. Estadual PE</span>
             </span>
           </div>
 

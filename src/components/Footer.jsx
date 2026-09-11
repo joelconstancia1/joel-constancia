@@ -1,4 +1,4 @@
-import { candidato } from '../data.js'
+import { candidato, campanha } from '../data.js'
 
 export default function Footer() {
   return (
@@ -23,7 +23,11 @@ export default function Footer() {
             <p>
               {candidato.cargo}
               <br />
-              <span className="text-amarelo">{candidato.estado} · 2026</span>
+              <span className="text-amarelo">
+                Partido {candidato.partido} {candidato.numeroPartido} · {candidato.numero}
+              </span>
+              <br />
+              <span className="text-white/30 text-xs">{candidato.estado} · 2026</span>
             </p>
           </div>
 
@@ -33,10 +37,22 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-white/5 text-center text-white/30 text-xs">
+        {/* Dados legais da campanha — aparecem assim que o CNPJ for preenchido em src/data.js */}
+        {campanha.cnpj && (
+          <div className="mt-10 pt-6 border-t border-white/5 text-center text-white/40 text-xs leading-relaxed">
+            {campanha.nomeFantasia && (
+              <p className="text-white/60 uppercase tracking-wider">{campanha.nomeFantasia}</p>
+            )}
+            {campanha.razaoSocial && <p className="mt-1">{campanha.razaoSocial}</p>}
+            <p className="mt-1">CNPJ {campanha.cnpj}</p>
+            {campanha.endereco && <p className="mt-1">{campanha.endereco}</p>}
+          </div>
+        )}
+
+        <div className="mt-6 pt-6 border-t border-white/5 text-center text-white/30 text-xs">
           <p>
-            Este site é uma iniciativa de pré-campanha e não substitui as comunicações oficiais
-            registradas no TSE.
+            Propaganda eleitoral — {candidato.nome} {candidato.numero}, {candidato.cargo} por{' '}
+            {candidato.estado}. Conteúdo de responsabilidade do comitê de campanha.
           </p>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { candidato, linkVaquinha, linkWhatsapp, redesSociais } from '../data.js'
+import { candidato, campanha, linkVaquinha, linkWhatsapp, redesSociais } from '../data.js'
 
 // =============================================================================
 //  COMO ADICIONAR FOTO EM CADA BOTÃO:
@@ -150,6 +150,12 @@ export default function LinkTree() {
           <p className="text-white/50 text-sm mt-3 leading-relaxed max-w-xs mx-auto">
             {candidato.cargo} por {candidato.estado}.
           </p>
+          <div className="mt-4 inline-block bg-amarelo text-noite font-display text-2xl px-4 py-1.5 rounded-lg shadow-lg">
+            {candidato.numero}
+          </div>
+          <p className="text-white/40 text-[11px] uppercase tracking-widest mt-2">
+            Partido {candidato.partido} {candidato.numeroPartido}
+          </p>
         </div>
 
         {/* Links */}
@@ -204,6 +210,16 @@ export default function LinkTree() {
                 </a>
               ))}
             </div>
+          </div>
+        )}
+
+        {/* Dados legais da campanha — aparecem assim que o CNPJ for preenchido em src/data.js */}
+        {campanha.cnpj && (
+          <div className="mt-10 pt-8 border-t border-white/10 text-center text-white/30 text-[11px] leading-relaxed">
+            {campanha.nomeFantasia && <p className="uppercase tracking-wider">{campanha.nomeFantasia}</p>}
+            {campanha.razaoSocial && <p className="mt-1">{campanha.razaoSocial}</p>}
+            <p className="mt-1">CNPJ {campanha.cnpj}</p>
+            {campanha.endereco && <p className="mt-1">{campanha.endereco}</p>}
           </div>
         )}
 

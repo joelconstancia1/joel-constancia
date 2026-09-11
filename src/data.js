@@ -46,11 +46,24 @@
 
 export const candidato = {
   nome: 'Joel Constância',
-  cargo: 'Pré-candidato a Deputado Estadual',
+  cargo: 'Candidato a Deputado Estadual',
   estado: 'Pernambuco',
-  numero: '00000',   // ← substitua pelo número oficial quando definido
-  partido: 'PARTIDO', // ← substitua pelo partido
+  numero: '14123',
+  partido: 'Missão',
+  numeroPartido: '14',
   tagline: 'Por uma Pernambuco mais justa, próspera e do nosso lado.',
+}
+
+// ---------------- Dados legais da campanha -----------------------------------
+// Obrigatórios na propaganda eleitoral na internet. Aparecem no rodapé das
+// páginas internas e no fim da página inicial.
+// Se o `cnpj` ficar vazio, o bloco inteiro deixa de ser exibido.
+
+export const campanha = {
+  cnpj: '68.455.501/0001-04',
+  nomeFantasia: 'Joel Constância 14123',
+  razaoSocial: 'Eleição 2026 Joel Francisco de Melo Neto Deputado Estadual',
+  endereco: 'Av. Joaquim Ribeiro, 740, Casa 23A — Caxangá, Recife/PE — CEP 50980-427',
 }
 
 // ---------------- Links externos ---------------------------------------------
