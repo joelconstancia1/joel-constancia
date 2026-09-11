@@ -150,11 +150,11 @@ export default function LinkTree() {
           <p className="text-white/50 text-sm mt-3 leading-relaxed max-w-xs mx-auto">
             {candidato.cargo} por {candidato.estado}.
           </p>
-          <div className="mt-4 flex items-center justify-center gap-1">
+          <div className="mt-4 flex items-center justify-center gap-0.5">
             <img
               src={logoPartido}
               alt={`Partido ${candidato.partido}`}
-              className="h-12 w-auto object-contain drop-shadow-lg"
+              className="h-14 w-auto object-contain drop-shadow-lg"
               onError={(e) => { e.currentTarget.style.display = 'none' }}
             />
             <div className="bg-amarelo text-noite font-display text-2xl px-4 py-1.5 rounded-lg shadow-lg">
