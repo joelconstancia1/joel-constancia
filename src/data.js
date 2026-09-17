@@ -77,6 +77,10 @@ export const campanha = {
 // Aparece em: hero (botão "Apoie a campanha") e página /propostas
 export const linkVaquinha = 'https://apoiar.me/joel'
 
+// PDF do plano de governo do Partido Missão — botão no fim da página /propostas
+export const linkPlanoGoverno =
+  'https://www.renanpresidente.com.br/plano-de-governo-missao-2026.pdf'
+
 // Link de convite do grupo de WhatsApp
 // Aparece em: hero (botão "Entre no nosso WhatsApp") e botão flutuante
 export const linkWhatsapp = 'https://chat.whatsapp.com/DyXSAkqktf57wrJkKJhPsJ?mode=wwt'

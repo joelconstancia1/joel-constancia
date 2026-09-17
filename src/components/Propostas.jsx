@@ -22,7 +22,7 @@ export default function Propostas() {
         <SectionTitle
           eyebrow="Plano de governo"
           title={<>Nossas <span className="text-amarelo">propostas</span></>}
-          subtitle="O que vamos defender no parlamento estadual pelo povo de Pernambuco. Conheça os eixos da nossa pré-campanha."
+          subtitle="O que vamos defender no parlamento estadual pelo povo de Pernambuco. Conheça os eixos da nossa campanha."
         />
 
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

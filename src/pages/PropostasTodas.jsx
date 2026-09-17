@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { propostas, linkVaquinha, linkWhatsapp } from '../data.js'
+import { propostas, linkVaquinha, linkWhatsapp, linkPlanoGoverno } from '../data.js'
 import Footer from '../components/Footer.jsx'
 import IconeProposta from '../components/IconeProposta.jsx'
 
@@ -94,6 +94,50 @@ export default function PropostasTodas() {
             </div>
           )}
 
+          {/* Plano de governo da missão (PDF) */}
+          <div className="mt-16 max-w-3xl mx-auto">
+            <a
+              href={linkPlanoGoverno}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block bg-gradient-to-br from-amarelo/10 to-amarelo/5 hover:from-amarelo/20 hover:to-amarelo/10 border border-amarelo/30 hover:border-amarelo/60 rounded-2xl p-6 sm:p-8 transition-all hover:shadow-2xl hover:shadow-amarelo/10"
+            >
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <div className="flex-shrink-0 inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-amarelo/20 border border-amarelo/40 text-amarelo">
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <div className="text-amarelo text-[10px] font-bold tracking-widest uppercase mb-1">
+                    Plano de Governo · PDF
+                  </div>
+                  <h2 className="font-display text-2xl sm:text-3xl text-white mb-2 leading-tight group-hover:text-amarelo transition-colors">
+                    Veja mais propostas
+                  </h2>
+                  <p className="text-white/70 text-sm sm:text-base leading-relaxed">
+                    O plano de governo completo da missão para 2026, aberto e gratuito.
+                  </p>
+                  <div className="sm:hidden mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amarelo/20 border border-amarelo/40 text-amarelo text-xs font-bold tracking-wider uppercase group-hover:bg-amarelo/30 transition-colors">
+                    Abrir PDF
+                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </div>
+                </div>
+                <svg
+                  className="hidden sm:block flex-shrink-0 w-5 h-5 text-amarelo group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </a>
+          </div>
+
           {/* Livro Amarelo */}
           <div className="mt-16 max-w-3xl mx-auto">
             <a
@@ -145,7 +189,7 @@ export default function PropostasTodas() {
                 Gostou das propostas?
               </h2>
               <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">
-                Apoie nossa pré-campanha pra que essas pautas cheguem ao parlamento estadual.
+                Apoie nossa campanha pra que essas pautas cheguem ao parlamento estadual.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <a

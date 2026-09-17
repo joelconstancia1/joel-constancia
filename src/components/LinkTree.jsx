@@ -26,6 +26,16 @@ const iconeWhatsapp = (
 
 const links = [
   {
+    label: 'Entre no WhatsApp',
+    sub: 'Fique por dentro de tudo',
+    href: linkWhatsapp,
+    icon: iconeWhatsapp,
+    emoji: '💬',
+    cor: 'from-green-500 to-emerald-600',
+    lado: 'left',
+    amarelo: false,
+  },
+  {
     label: 'Propostas',
     sub: 'Algumas propostas',
     href: '/propostas',
@@ -43,16 +53,6 @@ const links = [
     emoji: '🎙️',
     cor: 'from-purple-500 to-pink-600',
     lado: 'right',
-    amarelo: false,
-  },
-  {
-    label: 'Entre no WhatsApp',
-    sub: 'Fique por dentro de tudo',
-    href: linkWhatsapp,
-    icon: iconeWhatsapp,
-    emoji: '💬',
-    cor: 'from-green-500 to-emerald-600',
-    lado: 'left',
     amarelo: false,
   },
   {
