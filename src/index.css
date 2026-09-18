@@ -8,6 +8,10 @@
   --color-amarelo-claro: #FDE047;
   --color-amarelo-escuro: #CA8A04;
 
+  --color-zap: #25D366;
+  --color-zap-claro: #2DE372;
+  --color-zap-escuro: #1BA94C;
+
   --font-display: "Anton", "Impact", sans-serif;
   --font-sans: "Inter", system-ui, sans-serif;
 
@@ -15,6 +19,7 @@
   --animate-fade-in: fade-in 1s ease-out forwards;
   --animate-pulse-slow: pulse-slow 3s ease-in-out infinite;
   --animate-marquee: marquee 30s linear infinite;
+  --animate-brilho-zap: brilho-zap 2.6s ease-in-out infinite;
 }
 
 @keyframes fade-in-up {
@@ -36,6 +41,11 @@
 @keyframes pulse-slow {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.7; }
+}
+
+@keyframes brilho-zap {
+  0%, 100% { box-shadow: 0 0 14px 0 rgba(37, 211, 102, 0.25); }
+  50% { box-shadow: 0 0 30px 5px rgba(37, 211, 102, 0.45); }
 }
 
 @keyframes marquee {

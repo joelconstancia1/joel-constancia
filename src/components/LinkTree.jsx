@@ -24,6 +24,31 @@ const iconeWhatsapp = (
   </svg>
 )
 
+// Temas visuais dos cards. Use `tema` em cada link abaixo:
+//   'escuro'  → padrão (fundo grafite, texto amarelo)
+//   'amarelo' → destaque amarelo (vaquinha)
+//   'verde'   → destaque WhatsApp, com brilho pulsante
+const temas = {
+  escuro: {
+    card: 'bg-grafite hover:bg-carvao border-white/8 hover:border-amarelo/30 hover:shadow-amarelo/10',
+    label: 'text-amarelo',
+    sub: 'text-white/60',
+    icone: 'text-amarelo',
+  },
+  amarelo: {
+    card: 'bg-amarelo hover:bg-amarelo-claro border-amarelo hover:shadow-amarelo/40',
+    label: 'text-noite',
+    sub: 'text-noite/70',
+    icone: 'text-noite',
+  },
+  verde: {
+    card: 'bg-gradient-to-br from-zap-escuro via-zap to-zap-claro border-zap-claro hover:from-zap hover:to-zap-claro animate-brilho-zap hover:shadow-zap/50',
+    label: 'text-noite',
+    sub: 'text-noite/75',
+    icone: 'text-noite',
+  },
+}
+
 const links = [
   {
     label: 'Entre no WhatsApp',
@@ -33,7 +58,7 @@ const links = [
     emoji: '💬',
     cor: 'from-green-500 to-emerald-600',
     lado: 'left',
-    amarelo: false,
+    tema: 'verde',
   },
   {
     label: 'Propostas',
@@ -43,7 +68,7 @@ const links = [
     emoji: '📋',
     cor: 'from-blue-500 to-blue-700',
     lado: 'right',
-    amarelo: false,
+    tema: 'escuro',
   },
   {
     label: 'Entrevistas',
@@ -53,7 +78,7 @@ const links = [
     emoji: '🎙️',
     cor: 'from-purple-500 to-pink-600',
     lado: 'right',
-    amarelo: false,
+    tema: 'escuro',
   },
   {
     label: 'Apoie a campanha',
@@ -63,7 +88,7 @@ const links = [
     emoji: '🤝',
     cor: 'from-amarelo to-amarelo-escuro',
     lado: 'right',
-    amarelo: true,
+    tema: 'amarelo',
   },
 ]
 
@@ -97,7 +122,7 @@ const iconeRede = {
   ),
 }
 
-function Thumbnail({ link }) {
+function Thumbnail({ link, tema }) {
   const [erroImg, setErroImg] = useState(false)
 
   if (link.img && !erroImg) {
@@ -114,7 +139,7 @@ function Thumbnail({ link }) {
   }
   if (link.icon) {
     return (
-      <div className={`w-28 h-24 flex-shrink-0 flex items-center justify-center ${link.amarelo ? 'text-noite' : 'text-amarelo'}`}>
+      <div className={`w-28 h-24 flex-shrink-0 flex items-center justify-center ${tema.icone}`}>
         {link.icon}
       </div>
     )
@@ -168,34 +193,33 @@ export default function LinkTree() {
 
         {/* Links */}
         <div className="space-y-10 pt-8">
-          {links.map((link, i) => (
+          {links.map((link, i) => {
+            const tema = temas[link.tema] ?? temas.escuro
+            return (
             <a
               key={i}
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`group relative flex items-center w-full h-24 rounded-2xl border transition-all hover:-translate-y-0.5 hover:shadow-xl ${
-                link.amarelo
-                  ? 'bg-amarelo hover:bg-amarelo-claro border-amarelo hover:shadow-amarelo/40'
-                  : 'bg-grafite hover:bg-carvao border-white/8 hover:border-amarelo/30 hover:shadow-amarelo/10'
-              }`}
+              className={`group relative flex items-center w-full h-24 rounded-2xl border transition-all hover:-translate-y-0.5 hover:shadow-xl ${tema.card}`}
             >
-              {link.lado === 'left' && <Thumbnail link={link} />}
+              {link.lado === 'left' && <Thumbnail link={link} tema={tema} />}
 
               <div className="flex-1 flex flex-col justify-center items-center text-center px-3">
-                <span className={`block font-bold text-sm uppercase tracking-wide leading-tight ${link.amarelo ? 'text-noite' : 'text-amarelo'}`}>
+                <span className={`block font-bold text-sm uppercase tracking-wide leading-tight ${tema.label}`}>
                   {link.label}
                 </span>
                 {link.sub && (
-                  <span className={`block text-xs mt-1 leading-snug ${link.amarelo ? 'text-noite/70' : 'text-white/60'}`}>
+                  <span className={`block text-xs mt-1 leading-snug ${tema.sub}`}>
                     {link.sub}
                   </span>
                 )}
               </div>
 
-              {link.lado === 'right' && <Thumbnail link={link} />}
+              {link.lado === 'right' && <Thumbnail link={link} tema={tema} />}
             </a>
-          ))}
+            )
+          })}
         </div>
 
         {/* Redes sociais */}
