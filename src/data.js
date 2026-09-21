@@ -168,14 +168,14 @@ export const entrevistas = [
     data: '2026',
   },
   {
-    titulo: 'Podcast com Joel Constância',
-    veiculo: 'YouTube',
+    titulo: 'Joel Constância no Pernambuco em Pauta',
+    veiculo: 'TV Independência Carpina',
     videoId: 'hxnv8-ONEwg',
     data: '2026',
   },
   {
-    titulo: 'Podcast com Joel Constância',
-    veiculo: 'YouTube',
+    titulo: 'Talk Petra Podcast #94 — Joel Constância',
+    veiculo: 'Talk Petra',
     videoId: 'cu7bCWjvGXs',
     data: '2026',
   },
