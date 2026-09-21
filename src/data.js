@@ -154,7 +154,21 @@ export const agenda = [
 // "Ver todas" que leva para /entrevistas (página com todos os vídeos).
 // videoId:       apenas o ID do YouTube (parte final da URL: youtube.com/watch?v=ESSE_TRECHO)
 // videoVertical: true para vídeos verticais (9:16, ex: Reels/Shorts)
+// inicio:        opcional, em segundos — faz o vídeo abrir já nesse ponto
 export const entrevistas = [
+  {
+    titulo: 'Contraponto recebe Joel Constância',
+    veiculo: 'Notícias da Mata Norte',
+    videoId: 'tQIXlgeh71w',
+    data: '2026',
+  },
+  {
+    titulo: 'Eleições 2026 — Joel Constância 14123',
+    veiculo: 'VitoriaCast',
+    videoId: '_HRD1sgIKyE',
+    inicio: 1306, // começa no trecho que o Joel indicou (21min46s)
+    data: '2026',
+  },
   {
     titulo: 'Podcast com Joel Constância',
     veiculo: 'YouTube',

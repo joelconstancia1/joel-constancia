@@ -52,7 +52,7 @@ const temas = {
 const links = [
   {
     label: 'Entre no WhatsApp',
-    sub: 'Fique por dentro de tudo',
+    sub: 'Venha para o time',
     href: linkWhatsapp,
     icon: iconeWhatsapp,
     emoji: '💬',
