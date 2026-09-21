@@ -48,7 +48,7 @@ export default function EntrevistasTodas() {
                 >
                   <div className="relative bg-noite overflow-hidden aspect-video">
                     <iframe
-                      src={`https://www.youtube.com/embed/${video.videoId}${video.inicio ? `?start=${video.inicio}` : ''}`}
+                      src={`https://www.youtube.com/embed/${video.videoId}`}
                       title={video.titulo}
                       className="absolute inset-0 w-full h-full"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
